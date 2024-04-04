@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "526161192732",
+    "project_id": "education-app-852ed",
+    "storage_bucket": "education-app-852ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526161192732:android:362c4eda5af2bd5aca3cd9",
+        "android_client_info": {
+          "package_name": "com.ceesiz.education_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD35fQo785APeTCsbLaux5nnZwRJyMGXDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
