@@ -18,17 +18,25 @@ class SignUp extends UsecaseWithParams<void, SignUpParams> {
 
 class SignUpParams extends Equatable {
   const SignUpParams({
+    required this.fullName,
     required this.email,
     required this.password,
-    required this.fullName,
+    required this.confirmPassword,
   });
 
-  const SignUpParams.empty() : this(email: '', password: '', fullName: '');
+  const SignUpParams.empty()
+      : this(
+          email: '',
+          password: '',
+          fullName: '',
+          confirmPassword: '',
+        );
 
   final String email;
   final String password;
   final String fullName;
+  final String confirmPassword;
 
   @override
-  List<String> get props => [email, password, fullName];
+  List<String> get props => [email, password, fullName, confirmPassword];
 }

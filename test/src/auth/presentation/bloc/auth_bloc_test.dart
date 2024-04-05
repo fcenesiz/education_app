@@ -119,9 +119,10 @@ void main() {
       },
       act: (bloc) => bloc.add(
         SignUpEvent(
-          tSignUpParams.email,
-          tSignUpParams.password,
-          tSignUpParams.fullName,
+          email: tSignUpParams.email,
+          password: tSignUpParams.password,
+          name: tSignUpParams.fullName,
+          confirmPassword: tSignUpParams.confirmPassword,
         ),
       ),
       expect: () => const [
@@ -145,9 +146,10 @@ void main() {
       },
       act: (bloc) => bloc.add(
         SignUpEvent(
-          tSignUpParams.email,
-          tSignUpParams.password,
-          tSignUpParams.fullName,
+          email: tSignUpParams.email,
+          password: tSignUpParams.password,
+          name: tSignUpParams.fullName,
+          confirmPassword: tSignUpParams.confirmPassword,
         ),
       ),
       expect: () => [

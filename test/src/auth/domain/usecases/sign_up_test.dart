@@ -12,6 +12,7 @@ void main() {
   const tEmail = 'Test email';
   const tPassword = 'Test password';
   const tFullName = 'Test full name';
+  const tConfirmPassword = 'Test confirm password';
 
   setUp(() {
     repo = MockAuthRepo();
@@ -36,6 +37,7 @@ void main() {
           email: tEmail,
           password: tPassword,
           fullName: tFullName,
+          confirmPassword: tConfirmPassword,
         ),
       );
 

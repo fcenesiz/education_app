@@ -1,6 +1,5 @@
 part of 'auth_bloc.dart';
 
-
 abstract class AuthEvent extends Equatable {
   const AuthEvent();
 }
@@ -19,10 +18,16 @@ class SignInEvent extends AuthEvent {
 }
 
 class SignUpEvent extends AuthEvent {
-  const SignUpEvent(this.email, this.password, this.name);
+  const SignUpEvent({
+    required this.email,
+    required this.password,
+    required this.confirmPassword,
+    required this.name,
+  });
 
   final String email;
   final String password;
+  final String confirmPassword;
   final String name;
 
   @override
@@ -43,10 +48,10 @@ class UpdateUserEvent extends AuthEvent {
     required this.action,
     required this.userData,
   }) : assert(
-  userData is String || userData is File,
-  '[userData] must be either a String or a File, '
-      'but was ${userData.runtimeType}',
-  );
+          userData is String || userData is File,
+          '[userData] must be either a String or a File, '
+          'but was ${userData.runtimeType}',
+        );
 
   final UpdateUserAction action;
   final dynamic userData;
